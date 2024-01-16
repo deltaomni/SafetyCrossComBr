@@ -36,6 +36,18 @@
     margin-top:-25px;
     margin-bottom:-50px;
 }
+
+.icon_sc {
+    background: #1dc8cd;
+    background: linear-gradient(45deg, #1dc8cd 0%, #55fabe 100%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/*#more-features .icon svg {
+
+}*/
 @media (max-width: 768px) {
     .sc_pdca {
         margin-top: 10px;
@@ -1202,6 +1214,8 @@ section {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 
 #more-features h4 {
   margin-left: 100px;
