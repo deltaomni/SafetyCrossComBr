@@ -13,14 +13,14 @@
     /*text-transform:none !important;*/
     font-size: 20px !important;
     font-weight:400;
-    letter-spacing:0.53rem;
+    letter-spacing:0.50rem;
     color:white;
     text-transform:uppercase;
 }
 .sc_title {
     font-size: 14px !important;
     font-weight: 300;
-    letter-spacing: 0.26rem;
+    letter-spacing: 0.24rem;
 }
 .scbg-hero {
     background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8))
