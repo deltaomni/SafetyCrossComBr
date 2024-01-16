@@ -45,13 +45,18 @@
     -webkit-text-fill-color: transparent;
 }
 
-/*#more-features .icon svg {
+.sc_link_header{
+    height:60px;
+}
 
-}*/
 @media (max-width: 768px) {
     .sc_pdca {
         margin-top: 10px;
         margin-bottom: 10px;
+    }
+
+    .sc_link_header {
+        height: 40px;
     }
 }
 
