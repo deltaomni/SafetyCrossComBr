@@ -25,6 +25,10 @@
 .scbg-hero {
     background: linear-gradient(45deg, rgba(29, 224, 153, 0.8), rgba(29, 200, 205, 0.8))
 }
+.scbg_green_stripes {
+/*    background: repeating-linear-gradient( 45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px );
+*/    background: repeating-linear-gradient(-45deg, #198754, #198754 10px, #ffffff24 10px, #ffffff24 20px);
+}
 
 .sc_safetycross {
     position:relative;
@@ -48,6 +52,7 @@
 .sc_link_header{
     height:60px;
 }
+
 
 @media (max-width: 768px) {
     .sc_logo {
