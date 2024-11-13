@@ -34,6 +34,16 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- Google Maps -->
+    <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8F1bVIGsP_nHBaOBgBpDCsRd-LYeFUsA&callback=initMap&v=weekly&libraries=visualization"
+            defer></script>-->
+    <!-- prettier-ignore -->
+    <script>
+        (g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyC8F1bVIGsP_nHBaOBgBpDCsRd-LYeFUsA", v: "weekly" });</script>
+
+
+
     <!-- =======================================================
     * Template Name: Avilon
     * Updated: May 30 2023 with Bootstrap v5.3.0
@@ -66,9 +76,9 @@
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Início</a></li>
                     <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-                    <li><a class="nav-link scrollto" href="#features">Funcionalidades</a></li>
+                    <li><a class="nav-link scrollto" href="#features">Benefícios</a></li>
                     <li><a class="nav-link scrollto" href="#pricing">Planos</a></li>
-                    <li><a class="nav-link scrollto" href="#gallery">Galeria</a></li>
+                    <li><a class="nav-link scrollto" href="#gallery">Cases</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contato</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
@@ -99,78 +109,77 @@
                             </div>
                             <div>
                                 A <strong> Safety Cross automatizada</strong>, desenvolvida pela MapOmega, é parte de um Sistema de Inteligência de Riscos
-                                voltado para a prevenção da Saúde e da Segurança no trabalho. 
+                                voltado para a prevenção da Saúde e da Segurança no trabalho.
                             </div>
 
                         </div>
 
                     </div>
-                        <div class="col-12 col-md-6  d-none d-lg-block">
-                            <div class="d-flex flex-column text-light m-4 mx-0 p-2 border border-2 border-warning rounded-3">
+                    <div class="col-12 col-md-6  d-none d-lg-block">
+                        <div class="d-flex flex-column text-light m-4 mx-0 p-2 border border-2 border-warning rounded-3">
 
-                                <div class="d-flex text-warning">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                                         style="transform: rotate(90deg)"
-                                         class="bi bi-hand-index-thumb"
-                                         viewBox="0 0 16 16">
-                                        <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
-                                    </svg>
-                                    <h4 class="ms-4"><strong>SAFETY CROSS</strong></h4>
-                                </div>
-                                <div>
-                                    A <strong> Safety Cross automatizada</strong>, desenvolvida pela MapOmega, é parte de um Sistema de Inteligência de Riscos
-                                    voltado para a prevenção da Saúde e da Segurança no trabalho.
+                            <div class="d-flex text-warning">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                     style="transform: rotate(90deg)"
+                                     class="bi bi-hand-index-thumb"
+                                     viewBox="0 0 16 16">
+                                    <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
+                                </svg>
+                                <h4 class="ms-4"><strong>SAFETY CROSS</strong></h4>
+                            </div>
+                            <div>
+                                A <strong> Safety Cross automatizada</strong>, desenvolvida pela MapOmega, é parte de um Sistema de Inteligência de Riscos
+                                voltado para a prevenção da Saúde e da Segurança no trabalho.
+                            </div>
+                        </div>
+                        <h4 class="text-light">Ela possui três funções essenciais:</h4>
+                        <div class="accordion" id="accordion_Header">
+                            <div class="accordion-item">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <strong>Apontamentos de Perigos e Riscos</strong>
+                                </button>
+                                <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordion_Header">
+                                    <div class="accordion-body">
+                                        <div class="text-danger"><strong>Sem risco não há acidente</strong></div>
+                                        A Safety Cross permite localizar e identificar riscos presentes no ambiente de trabalho, e organizar os apontamentos num calendário mensal, com 31 dias. Isso permite acompanhar visualmente, de forma direta e abrangente, a construção de um potencial de riscos, num determinado local de trabalho.
+                                        <br /><a href="#sc_antes_depois">Saiba mais</a>
+                                    </div>
                                 </div>
                             </div>
-                            <h4 class="text-light">Ela possui três funções essenciais:</h4>
-                            <div class="accordion" id="accordion_Header">
-                                <div class="accordion-item">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        <strong>Apontamentos de Perigos e Riscos</strong>
-                                    </button>
-                                    <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#accordion_Header">
-                                        <div class="accordion-body">
-                                            <div class="text-danger"><strong>Sem risco não há acidente</strong></div>
-                                            Localizar e identificar riscos presentes no ambiente de trabalho permite distribuir recursos com eficiência, tornando a empresa mais competitiva em todos os aspectos.
-                                            <br /><a href="#">Saiba mais</a>
-                                        </div>
+                            <div class="accordion-item">
+
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <strong>Antecipação do Acidente</strong>
+                                </button>
+
+                                <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordion_Header">
+                                    <div class="accordion-body">
+                                        <div class="text-danger"><strong>Com IA, a Safety Cross antecipa acidentes</strong></div>
+                                        Nossa Inteligência Artificial permite antecipar potenciais de acidentes em tempo real, construindo mapas de riscos dinâmicos e definindo prioridades de ação para a máxima eficiência no uso dos recursos de prevenção. 
+                                        <br />Isso ajuda sua empresa a ser mais produtiva e lucrativa.
+                                        <br /><a href="#sc_antecipacao">Saiba mais</a>
                                     </div>
                                 </div>
-                                <div class="accordion-item">
+                            </div>
 
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                        <strong>Antecipação do Risco</strong>
-                                    </button>
-
-                                    <div id="collapseOne" class="accordion-collapse collapse " data-bs-parent="#accordion_Header">
-                                        <div class="accordion-body">
-                                            <div class="text-danger"><strong>Remediar acidentes diminui a competitividade</strong></div>
-                                            Com menos recursos para investir, e uma moral baixa dos colaboradores, os resultados tendem a piorar.
-                                            <br /><a href="#">Saiba mais</a>
-                                        </div>
+                            <div class="accordion-item">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <strong>Disparo de Alertas de Riscos</strong>
+                                </button>
+                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion_Header">
+                                    <div class="accordion-body">
+                                        <div class="text-warning"><strong>Alertas salvam vidas</strong></div>
+                                        Alertas disparados em tempo real, quando o grau de risco se tornar inaceitável num determinado local, permitem calibrar decisões e intervir rapidamente, antes que um acidente aconteça.
+                                        <br /><a href="#sc_alertas">Saiba mais</a>
                                     </div>
                                 </div>
-
-                                <div class="accordion-item">
-
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        <strong>Alertas</strong>
-                                    </button>
-
-                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordion_Header">
-                                        <div class="accordion-body">
-                                            <div class="text-warning"><strong>Alertas salvam vidas</strong></div>
-                                            Alertas disparados em tempo real, quando o grau de risco se tornar inaceitável num determinado local, permitem calibrar decisões e intervir rapidamente, antes que um acidente aconteça.
-                                            <br /><a href="#sc_alertas">Saiba mais</a>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
 
                         </div>
 
                     </div>
+
+                </div>
             </div>
         </div>
 
@@ -213,23 +222,33 @@
                         <!--<h5 class="section-description pb-0">sem conhecer os riscos?</h5>-->
                         <span class="section-divider"></span>
                     </div>
-                   
+
                 </div>
 
                 <div class="row gy-4 pb-0">
 
                     <div id="sc_apontamentos" class="col-lg-4 d-flex flex-column">
                         <div class="box bg-success text-light">
-                            <div class="icon me-4">
-                                <i class="bi bi-award-fill"></i>
-                            </div>
 
-                            <h3 class="text-light"><a href="#sc_funcoes">Dia sem Acidente</a></h3>
-                            <p class="description">
-                                <strong>VERDE SÓLIDO</strong> significa que o responsável da área <strong>confirmou</strong> que não houve acidente no dia.
-                                <br /><br />
-                                <strong>VERDE HACHURADO</strong> significa que não há nenhum tipo de registro por parte do responsável, naquele dia.
-                            </p>
+                            
+                                <div class="icon me-4">
+                                    <i class="bi bi-award-fill"></i>
+                                </div>
+
+                                <h3 class="text-light">Dia sem Acidente</h3>
+                          
+                            <div class="d-flex flex-column  rounded-3 p-3 bg-success mb-0">
+                                <h6 class="title text-light ms-0 align-content-center">VERDE SÓLIDO</h6>
+                                <p class="description ms-0">
+                                    O responsável da área <strong>confirmou</strong> que não houve acidente no dia.
+                                </p>
+                            </div>
+                            <div class="d-flex flex-column  border-success-subtle rounded-3 p-3 scbg_green_stripes mb-1">
+                                <h6 class="title text-light ms-0 align-content-center" >VERDE HACHURADO</h6>
+                                <p class="description ms-0">
+                                    O responsável da área não lançou nada, nem confirmou que não houve acidente no dia.
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -238,11 +257,11 @@
                             <div class="icon me-4">
                                 <i class="bi bi-exclamation-triangle-fill"></i>
                             </div>
-                            <h3 class="text-light"><a href="#sc_funcoes">Acidentes Graves</a></h3>
+                            <h3 class="text-danger">Acidentes Graves</h3>
 
-                            <div class="d-flex flex-row border rounded-3 p-3 bg-danger mb-3">
+                            <div class="d-flex flex-row border rounded-3 p-3 bg-danger my-3">
 
-                                <h1 class="title text-light ms-0 align-content-center"><a href="#sc_funcoes">CPT</a></h1>
+                                <h1 class="title text-danger-emphasis ms-0 align-content-center">CPT</h1>
                                 <p class="description text-danger-emphasis ms-3">
                                     <strong>Vermelho: </strong>Acidentes <strong>COM</strong> Perda de Tempo
                                 </p>
@@ -251,7 +270,7 @@
 
                             <div class="d-flex flex-row border rounded-3 p-3 bg-danger-subtle">
 
-                                <h1 class="title text-light ms-0 align-content-center"><a href="#sc_funcoes">SPT</a></h1>
+                                <h1 class="title text-danger ms-0 align-content-center">SPT</h1>
                                 <p class="description text-danger ms-3">
                                     <strong>Vermelho desbotado: </strong>Acidentes <strong>SEM</strong> Perda de Tempo
                                 </p>
@@ -260,22 +279,22 @@
                         </div>
                     </div>
 
-                    <div id="sc_alertas" class="col-lg-4 d-flex flex-column">
+                    <div class="col-lg-4 d-flex flex-column">
                         <div class="box bg-transparent">
                             <div class="icon me-4">
                                 <i class="bi bi-bandaid-fill icon-sm"></i>
                             </div>
-                            <h5 class="text-light"><a href="#sc_funcoes">Primeiros Socorros/<br />Quase Acidente</a></h5>
+                            <h5 class="text-warning">Primeiros Socorros/<br />Quase Acidente</h5>
 
                             <div class="d-flex flex-row border rounded-3 p-3 bg-warning mb-3">
-                                <h1 class="title text-light ms-0 align-content-center"><a href="#sc_funcoes">PS</a></h1>
+                                <h1 class="title text-warning-emphasis ms-0 align-content-center">PS</h1>
                                 <p class="description text-warning-emphasis ms-3">
                                     <strong>Laranja: </strong>Primeiros Socorros
                                 </p>
                             </div>
 
                             <div class="d-flex flex-row border rounded-3 p-3 bg-warning-subtle">
-                                <h1 class="title text-light ms-0 align-content-center"><a href="#sc_funcoes">SPT</a></h1>
+                                <h1 class="title text-warning ms-0 align-content-center">SPT</h1>
                                 <p class="description text-warning ms-3">
                                     <strong>Laranja desbotado:</strong> Quase Acidente
                                 </p>
@@ -287,94 +306,104 @@
         </section><!-- End More Features Section -->
         <!-- ======= More Features Section ======= -->
         <!--<section id="more-features" class="section-bg py-4">
-            <div class="container" data-aos="fade-up">
+        <div class="container" data-aos="fade-up">
 
-                <div class="row gy-4 pb-0">
+            <div class="row gy-4 pb-0">
 
-                    <div class="col-lg-12">
-                        <div class="box">
-                            <div class="icon"><i class="bi bi-stoplights"></i></div>
-                            <h4 class="title mb-3"><a href="#sc_nr">Além de saber planejar para o Lucro, toda empresa deve saber antecipar riscos ...</a></h4>
-                            <h4 class="title "><a href="#sc_nr" class="text-primary">Legislação NR-1</a></h4>
-                            <p class="description text-primary">
-                                1.4 Direitos e deveres<br />
-                                1.4.1 Cabe ao empregador:<br />
-                                &#160;&#160;a) cumprir e fazer cumprir as disposições legais e regulamentares sobre segurança e saúde no
-                                trabalho;<br />
-                            <p />
-                            <p class="description text-danger mb-3">
-                                &#160;&#160;b) informar aos trabalhadores:<br />
-                                &#160;&#160;&#160;&#160;I. os riscos ocupacionais existentes nos locais de trabalho;
-                            </p>
-                            <h4 class="title"><a href="#sc_nr">.... caso contrário deverá pelo menos saber conter as perdas.</a></h4>
-                        </div>
+                <div class="col-lg-12">
+                    <div class="box">
+                        <div class="icon"><i class="bi bi-stoplights"></i></div>
+                        <h4 class="title mb-3"><a href="#sc_nr">Além de saber planejar para o Lucro, toda empresa deve saber antecipar riscos ...</a></h4>
+                        <h4 class="title "><a href="#sc_nr" class="text-primary">Legislação NR-1</a></h4>
+                        <p class="description text-primary">
+                            1.4 Direitos e deveres<br />
+                            1.4.1 Cabe ao empregador:<br />
+                            &#160;&#160;a) cumprir e fazer cumprir as disposições legais e regulamentares sobre segurança e saúde no
+                            trabalho;<br />
+                        <p />
+                        <p class="description text-danger mb-3">
+                            &#160;&#160;b) informar aos trabalhadores:<br />
+                            &#160;&#160;&#160;&#160;I. os riscos ocupacionais existentes nos locais de trabalho;
+                        </p>
+                        <h4 class="title"><a href="#sc_nr">.... caso contrário deverá pelo menos saber conter as perdas.</a></h4>
                     </div>
-                    <div id="sc_funcoes"></div>
-                    <div class="section-header pt-4">
-                        <span class="section-divider"></span>
-                        <h3 class="section-title">Como evitar acidentes</h3>
-                        <h5 class="section-description pb-0">sem conhecer os riscos?</h5>
+                </div>
+                <div id="sc_funcoes"></div>
+                <div class="section-header pt-4">
+                    <span class="section-divider"></span>
+                    <h3 class="section-title">Como evitar acidentes</h3>
+                    <h5 class="section-description pb-0">sem conhecer os riscos?</h5>
+                </div>
+            </div>
+
+            <div class="row gy-4 pb-0">
+
+                <div id="sc_apontamentos" class="col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                                     style="transform: rotate(45deg)"
+                                     class="bi bi-hand-index-thumb"
+                                     viewBox="0 0 16 16">
+                                    <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
+                                </svg>
+                            </i>
+                        </div>
+                        <h4 class="title"><a href="#sc_funcoes">Apontamentos</a></h4>
+                        <p class="description">
+                            A <strong>Safety Cross</strong> localiza e identifica <strong>perigos</strong> e
+                            <strong> riscos</strong>. Isso permite visualizar a base da
+                            <a href="https://www.google.com/search?q=pir%C3%A2mide+de+Bird" target="_blank">Pirâmide de Bird</a>, para antecipar ações preventivas.-->
+        <!--<br /> <a href="#">Saiba mais</a>-->
+        <!--</p>
+        </div>
+    </div>
+
+    <div id="sc_grau_de_risco" class="col-lg-4">
+        <div class="box">
+            <div class="icon">
+                <i class="bi bi-clouds-fill"></i>
+            </div>
+            <h4 class="title pb-0 mb-0"><a href="#sc_funcoes">Grau de Risco</a></h4>
+            <p class="description fst-italic text-info">Sem risco, não há lesão.</p>
+            <p class="description">
+                Usar a Inteligência Artificial para antecipar riscos críticos é uma evolução significativa na prevenção.-->
+        <!--<br /><a href="#">Saiba mais</a>-->
+        <!--</p>
                     </div>
                 </div>
 
-                <div class="row gy-4 pb-0">
 
-                    <div id="sc_apontamentos" class="col-lg-4">
-                        <div class="box">
-                            <div class="icon">
-                                <i>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
-                                         style="transform: rotate(45deg)"
-                                         class="bi bi-hand-index-thumb"
-                                         viewBox="0 0 16 16">
-                                        <path d="M6.75 1a.75.75 0 0 1 .75.75V8a.5.5 0 0 0 1 0V5.467l.086-.004c.317-.012.637-.008.816.027.134.027.294.096.448.182.077.042.15.147.15.314V8a.5.5 0 0 0 1 0V6.435l.106-.01c.316-.024.584-.01.708.04.118.046.3.207.486.43.081.096.15.19.2.259V8.5a.5.5 0 1 0 1 0v-1h.342a1 1 0 0 1 .995 1.1l-.271 2.715a2.5 2.5 0 0 1-.317.991l-1.395 2.442a.5.5 0 0 1-.434.252H6.118a.5.5 0 0 1-.447-.276l-1.232-2.465-2.512-4.185a.517.517 0 0 1 .809-.631l2.41 2.41A.5.5 0 0 0 6 9.5V1.75A.75.75 0 0 1 6.75 1M8.5 4.466V1.75a1.75 1.75 0 1 0-3.5 0v6.543L3.443 6.736A1.517 1.517 0 0 0 1.07 8.588l2.491 4.153 1.215 2.43A1.5 1.5 0 0 0 6.118 16h6.302a1.5 1.5 0 0 0 1.302-.756l1.395-2.441a3.5 3.5 0 0 0 .444-1.389l.271-2.715a2 2 0 0 0-1.99-2.199h-.581a5 5 0 0 0-.195-.248c-.191-.229-.51-.568-.88-.716-.364-.146-.846-.132-1.158-.108l-.132.012a1.26 1.26 0 0 0-.56-.642 2.6 2.6 0 0 0-.738-.288c-.31-.062-.739-.058-1.05-.046zm2.094 2.025" />
-                                    </svg>
-                                </i>
-                            </div>
-                            <h4 class="title"><a href="#sc_funcoes">Apontamentos</a></h4>
-                            <p class="description">
-                                A <strong>Safety Cross</strong> localiza e identifica <strong>perigos</strong> e
-                                <strong> riscos</strong>. Isso permite visualizar a base da
-                                <a href="https://www.google.com/search?q=pir%C3%A2mide+de+Bird" target="_blank">Pirâmide de Bird</a>, para antecipar ações preventivas.-->
-                                <!--<br /> <a href="#">Saiba mais</a>-->
-                            <!--</p>
+                <div id="sc_alertas" class="col-lg-4">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="bi bi-umbrella"></i>
                         </div>
-                    </div>
-
-                    <div id="sc_grau_de_risco" class="col-lg-4">
-                        <div class="box">
-                            <div class="icon">
-                                <i class="bi bi-clouds-fill"></i>
-                            </div>
-                            <h4 class="title pb-0 mb-0"><a href="#sc_funcoes">Grau de Risco</a></h4>
-                            <p class="description fst-italic text-info">Sem risco, não há lesão.</p>
-                            <p class="description">
-                                Usar a Inteligência Artificial para antecipar riscos críticos é uma evolução significativa na prevenção.-->
-                                <!--<br /><a href="#">Saiba mais</a>-->
-                            <!--</p>
-                        </div>
-                    </div>
-
-
-                    <div id="sc_alertas" class="col-lg-4">
-                        <div class="box">
-                            <div class="icon">
-                                <i class="bi bi-umbrella"></i>
-                            </div>
-                            <h4 class="title pb-0 mb-0"><a href="#sc_funcoes">Alerta de Risco</a></h4>
-                            <p class="description fst-italic text-info">Mais vale prevenir...</p>
-                            <p class="description">
-                                Alertas precisos em tempo real permitem direcionar recursos preventivos com a máxima eficiência.
-                                <br /><a href="#sc_alertas">Saiba mais</a>
-                            </p>
-                        </div>
+                        <h4 class="title pb-0 mb-0"><a href="#sc_funcoes">Alerta de Risco</a></h4>
+                        <p class="description fst-italic text-info">Mais vale prevenir...</p>
+                        <p class="description">
+                            Alertas precisos em tempo real permitem direcionar recursos preventivos com a máxima eficiência.
+                            <br /><a href="#sc_alertas">Saiba mais</a>
+                        </p>
                     </div>
                 </div>
             </div>
-        </section>--><!-- End More Features Section -->
+        </div>
+    </section>-->
+        <!-- End More Features Section -->
 
-        <div id="sc_antes_depois"></div>
+        <div id="sc_antes_depois" class="section-bg sc_link_header"></div>
         <section id="more-features" class="section-bg d-none d-lg-block pt-4">
+            <div class="row gy-4 pb-0">
+                <div class="section-header">
+
+                    <h3 class="section-title">Aplicativo de Apontamentos</h3>
+                    <h5 class="section-description pb-0">Interface moderna para reduzir treinamentos e aumentar a adoção no chão de fábrica.</h5>
+                    <span class="section-divider"></span>
+                </div>
+
+            </div>
             <div class="d-flex flex-row m-4 justify-content-center">
                 <div class="col-lg-6">
                     <div id="antesdepois1" class="bal-container">
@@ -442,13 +471,13 @@
                             <div class="col-lg-6 col-md-6 box  p-0 m-0 " data-aos="fade-up">
                                 <div class="icon"><i class="bi bi-geo-alt"></i></div>
                                 <h4 class="title"><a href="#sc_funcionalidades">Feed-Back</a></h4>
-                                <p class="description">Feedback Visual em Tempo Real, oferece uma representação clara e visual do desempenho em segurança, destacando rapidamente períodos com incidentes e incentivando a equipe a manter uma sequência de dias "verdes".</p>
+                                <p class="description">Um Feedback Visual em Tempo Real, oferece uma representação clara e visual do desempenho em segurança, destacando rapidamente períodos com incidentes e incentivando a equipe a manter uma sequência de dias "verdes".</p>
                             </div>
                             <div class="col-lg-6 col-md-6 box   p-0 m-0" data-aos="fade-up">
                                 <div class="icon"><i class="bi bi-share"></i></div>
                                 <h4 class="title"><a href="#sc_funcionalidades">Responsabilidade</a></h4>
-                                <p class="description">Ela lembra a todos da importância das práticas de segurança, promovendo um senso de responsabilidade compartilhada entre os funcionários e supervisores para evitar incidentes.</p>
-</div>
+                                <p class="description">A Safety Cross lembra a todos da importância das práticas de segurança, promovendo um senso de responsabilidade compartilhada entre os funcionários e supervisores para evitar incidentes.</p>
+                            </div>
                             <div class="col-12 text-center w-100 p-0 m-0 ">
                                 <img height="100" class="sc_pdca" src="assets/img/sc_logo/SC_Logo_PDCA.svg" />
                             </div>
@@ -457,14 +486,14 @@
                                 <div class="icon">
                                     <i class="bi bi-check-all"></i>
                                 </div>
-                                <h4 class="title"><a href="#sc_funcionalidades">Simples</a></h4>
-                                <p class="description">Ela é simples e codificada por cores, isso permite a todos os funcionários, independentemente do cargo ou nível de experiência, entender as prioridades.</p>
-</div>
+                                <h4 class="title"><a href="#sc_funcionalidades">Simplicidade</a></h4>
+                                <p class="description">A Safety Cross é simples e codificada por cores, isso permite a todos os funcionários, independentemente do cargo ou nível de experiência, entender as prioridades.</p>
+                            </div>
 
                             <div class="col-lg-6 col-md-6 box" data-aos="fade-up" data-aos-delay="100">
                                 <div class="icon"><i class="bi bi-trophy"></i></div>
-                                <h4 class="title"><a href="#sc_funcionalidades">Cultura Coletiva</a></h4>
-                                <p class="description">A meta de aumentar os dias verdes constrói uma cultura de conscientização, onde a redução de incidentes se torna um objetivo coletivo.</p>
+                                <h4 class="title"><a href="#sc_funcionalidades">Cultura Colaborativa</a></h4>
+                                <p class="description">A meta de aumentar os dias verdes constrói uma cultura de conscientização, onde a redução de incidentes se torna um objetivo pessoal e colaborativo.</p>
                             </div>
 
                         </div>
@@ -477,6 +506,7 @@
 
         </section><!-- End Featuress Section -->
         <!-- ======= Advanced Featuress Section ======= -->
+        <div id="sc_antecipacao" class="section-bg sc_link_header"></div>
         <section id="advanced-features">
             <div class="features-row section-bg pb-0" data-aos="fade-up">
                 <div class="container">
@@ -488,9 +518,10 @@
                                 <h2 class="title">A pressa provoca acidentes</h2>
                                 <h3>Acidentes e doenças ocupacionais não ocorrem por acaso. </h3>
                             </div>
+
                             <p class="m-2">
                                 A Tecnologia traz competitividade, reduz ciclos e aumenta a velocidade.
-                                Mas sem Segurança, <strong><italic>perdemos</italic></strong> essa competitividade, diminuindo produtividade, desperdiçando recursos com taxas inflacionadas de seguros.
+                                Mas sem Segurança, <strong><italic>perdemos</italic></strong> essa competitividade, diminuindo produtividade, desperdiçando recursos com retrabalho, remediação e contenção, e taxas inflacionadas de seguros.
                             </p>
 
                             <i class="bi bi-stopwatch pt-1"></i>
@@ -507,47 +538,84 @@
                     </div>
                 </div>
             </div>
-
             <div class="features-row" data-aos="fade-up">
                 <div class="container">
+
                     <div class="d-flex fex-row flex-wrap justify-content-center align-items-center">
-                        <div class="col-lg-6 col-12">
-                            <img class="advanced-feature-img-left" src="assets/img/advanced-feature-3.png" alt="Tecnologia = Velocidade">
-                        </div>
                         <div class="col-lg-6 col-12 d-flex flex-column p-2">
                             <h2>Tecnologia = Velocidade</h2>
-                            <div class="p-2 align-content-center">
+                            <div class="p-2 align-content-cente d-flexr">
                                 <i class="bi bi-cloud-lightning"></i>
                                 <p><strong>A Tecnologia</strong> processa informações precisas, em grandes volumes e em tempo real.</p>
                             </div>
 
 
-                            <div class="p-2 align-content-center">
+                            <div class="p-2 align-content-center d-flex">
                                 <i class="bi bi-activity"></i>
                                 <p><strong>A Tecnologia</strong> traz segurança e integridade de dados.</p>
                             </div>
 
 
-                            <div class="p-2 align-content-center">
+                            <div class="p-2 align-content-center d-flex">
                                 <i class="bi bi-puzzle"></i>
                                 <p><strong>A Tecnologia</strong> é escalável a baixo custo.</p>
                             </div>
 
 
-                            <div class="p-2">
-                                <strong>A Tecnologia</strong> é um commodity ao alcance do bolso, porém, potência sem controle é apenas desperdício.
-                            </div>
-                            <div class="p-2">
-                                <strong>A MapOmega Tecnologia</strong> oferece a Safety Cross, uma solução que integra o estado da arte em tecnologia, voltada para a antecipação de riscos em ambientes de trabalho.
+                            <div class="p-2 text-center">
+                                A <strong>Tecnologia</strong> é um commodity ao alcance do bolso, porém, potência sem controle é apenas desperdício.
                             </div>
 
+                        </div>
+                        <div class="col-lg-6 col-12 text-center">
+                            <img class="advanced-feature-img-left" src="assets/img/advanced-feature-3.png" alt="Tecnologia = Velocidade">
                         </div>
 
                     </div>
                 </div>
             </div>
-            <div id="sc_alertas" class="sc_link_header">
+
+            <div class="features-row" data-aos="fade-up">
+                <div class="container">
+
+                    <div class="d-flex fex-row flex-wrap justify-content-center align-items-center">
+                        <div class="col-lg-6 col-12">
+                            <img class="advanced-feature-img-left" src="assets/img/advanced-feature-4.png" alt="Tecnologia = Velocidade">
+                        </div>
+                        <div class="col-lg-6 col-12 d-flex flex-column p-2">
+                            <h2>Inteligência de Riscos</h2>
+                            <div class="p-2 align-content-center d-flex">
+                                <i class="bi bi-robot"></i>
+                                <p>É um modelo de <strong>Inteligência Artificial</strong> desenvolvido pela MapOmega.</p>
+                            </div>
+
+
+                            <div class="p-2 align-content-center d-flex">
+                                <i class="bi bi-bullseye"></i>
+                                <p>O Modelo é capaz de antecipar e localizar no mapa, concentrações de riscos críticos, com grau de acurácia superior a 85%.
+                                <br />Sua função é gerar mapas de riscos dinâmicos, atualizados em tempo real.
+                                Isso supera os requisitos da NR-5, que estabelece uma atualização do Mapa de Riscos pelo menos uma vez por ano, sob pena de multa, na ocasião da CIPA.</p>
+                            </div>
+
+
+                            <div class="p-2 align-content-center d-flex">
+                                <i class="bi bi-lightning-fill"></i>
+                                <p>O Modelo é alimentado em tempo real pela Safety Cross, de modo manual ou automático (API), e fornece as prioridades de prevenção sob forma de um relatório e de um mapa.
+                                <br />Isso permite investir recursos de prevenção sem desperdícios, com a máxima eficácia na eliminação dos riscos e dos acidentes.</p>
+                            </div>
+                        </div>
+                        <div class="col-12 p-2 text-center">
+                          
+                                A MapOmega oferece a <strong>Safety Cross</strong>, uma solução que integra o estado da arte em tecnologia, voltada para a antecipação de riscos em ambientes de trabalho.
+                           
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
+
+            <div id="sc_alertas" class="sc_link_header"></div>
 
             <!-- ======= More Features Section ======= -->
             <section id="more-features" class="section-bg">
@@ -556,19 +624,19 @@
 
                         <div class="col-12 col-sm-5 p-4 py-2">
                             <h2>Alerta de Risco</h2>
-                            <h3>A <strong>Safety Cross</strong> comunica diretamente com todos os colaboradores na organizção.</h3>
-                            Sua informação é direta, ao alcançe de uma simples passada de olhos.
+                            <h3>A <strong>Safety Cross</strong> comunica diretamente com todos os colaboradores na organização, em tempo real.</h3>
+                            Sua informação é direta, ao alcance de uma simples passada de olhos, ou de um alerta no celular.
                             <div class="d-flex flex-column ">
                                 <div class="d-flex flex-row ">
                                     <div class="p-0 d-flex align-items-center text-success">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="96" fill="currentColor" viewBox="0 0 24 24"><path d="M18 14H14V18H10V14H6V10H10V6H14V10H18" /></svg>
                                     </div>
                                     <div class="p-2 ">
-                                        Para isso, a <strong>Safety Cross</strong> utiliza uma simbologia padronizada, a cruz, reconhecida universalmente para identificar recursos de saúde e segurança.
+                                        Para isso, a <strong>Safety Cross</strong> utiliza uma simbologia padronizada, a cruz de segurança, reconhecida como símbolo universal para identificar recursos de saúde e segurança.
                                     </div>
                                 </div>
                                 <div class="p-2 ">
-                                    Ela é dividida nos 31 dias do calendário.
+                                    A <strong>Safety Cross</strong> é dividida em 31 dias do calendário.
                                     <br />O objetivo da <strong>Safety Cross</strong> é ficar sempre <span class="text-success"><strong>verde</strong></span>.
                                     <br />Verde sólido todos os dias, um dia de cada vez.
                                 </div>
@@ -594,7 +662,13 @@
                         </div>
 
                     </div>
+                    <!--<div class="row p-0">
 
+                        <div class="col text-center">
+                            O objetivo da <strong>Safety Cross</strong> é ficar sempre <span class="text-success"><strong>verde</strong></span>.
+                            <br />Verde sólido todos os dias, um dia de cada vez.
+                        </div>
+                    </div>-->
                 </div>
             </section><!-- End More Features Section -->
 
@@ -650,602 +724,592 @@
 
 
         </section><!-- End Advanced Featuress Section -->
-        <!-- ======= Call To Action Section ======= -->
-        <section id="call-to-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 text-center text-lg-start">
-                        <h3 class="cta-title">
-                            <img height="42" width="42" src="assets/img/sc_logo/SC_Logo_502_48x48_Green_White_Transparent.svg" class="m-0 me-1 img-thumbnail img-fluid border border-2 border-light rounded-circle scbg-hero scui_logo" alt="Safety Cross">
-
-                            &nbsp;<strong>Conheça as possibilidades</strong>
-                        </h3>
-                        <p class="cta-text">Conheça as possibilidades da <strong>Safety Cross</strong> através de casos de usos, exemplos de configurações e de implementações.</p>
-                        <div class="d-grid gap-2">
-                            <a class="btn cta-btn btn-lg get-started-btn align-middle text-center m-0 mb-3" role="button"
-                               href="#contact_form">Inscreva-se Gratuitamente</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div id="sc_tecnologia"></div>
-        <!-- ======= More Features Section ======= -->
-        <section id="more-features" class="section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header p-0 m-0">
-                    <h3 class="section-title mb-1">Tecnologia + Padronização</h3>
-                    <h5 class="section-description pb-0">Velocidade + Eficiência</h5>
-                    <span class="section-divider"></span>
-                </div>
-
-                <div class="row gy-4">
-
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="icon">
-
-                                <svg height="80" class="icon_sc" viewBox="0 0 24 24">
-                                    <path fill="currentColor" d="M7 7H5A2 2 0 0 0 3 9V17H5V13H7V17H9V9A2 2 0 0 0 7 7M7 11H5V9H7M14 7H10V17H12V13H14A2 2 0 0 0 16 11V9A2 2 0 0 0 14 7M14 11H12V9H14M20 9V15H21V17H17V15H18V9H17V7H21V9Z" />
-                                </svg>
-
-
-                            </div>
-                            <h4 class="title"><a href="#sc_tecnologia">Entradas</a></h4>
-                            <p class="description">
-                                Manuais (Relatórios de turnos) ou automatizadas (API).
-                                <br />Não requer conexão permanente, apenas na transição do ciclo de registro (Turno/Dia)
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="icon"><i class="bi bi-cloud-upload"></i></div>
-                            <h4 class="title"><a href="#sc_tecnologia">Processamento</a></h4>
-                            <p class="description">100% na nuvem, com recursos atualizados e Bases de Dados seguras.</p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="icon"><i class="bi bi-fingerprint"></i></div>
-                            <h4 class="title"><a href="#sc_tecnologia">Verificação e Controle</a></h4>
-                            <p class="description">
-                                Antecipar é com a IA, mas a validação é sempre feita por humanos.
-                                <br />Buscamos uma taxa de validação superior a 90%, permitindo reduções substanciais na contenção.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                        <div class="box">
-                            <div class="icon"><i class="bi bi-laptop"></i></div>
-                            <div class="icon"><i class="bi bi-phone"></i></div>
-                            <h4 class="title"><a href="#sc_tecnologia">Alertas/ Relatórios</a></h4>
-                            <p class="description">Todos os Alertas/ Relatórios são acessíveis via Web App (PWA) ou Plataforma (Web).</p>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section><!-- End More Features Section -->
-        <!-- ======= Pricing Section ======= -->
-        <section id="pricing" class="section-bg">
-            <div class="container" data-aos="fade-up">
-
-                <div class="section-header">
-                    <h3 class="section-title">Preços</h3>
-                    <span class="section-divider"></span>
-                    <h3 class="section-title">
-                        <a href="https://wa.me/5521996485172">
-                            <img width="34" src="assets/img/tp_logo/Digital_Glyph_Green.png" />
-                            <!--<i class="bi bi-whatsapp"></i>-->
-                            <span style="color: #25d366;"> CONTATO</span>
-                        </a>
-                    </h3>
-
-                    <p class="section-description">
-                        Entre em contato agora mesmo,
-                        <br />e tire as suas dúvidas.
-                    </p>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box">
-                            <h3>Local</h3>
-                            <h6>Configuração inicial</h6>
-                            <h4><sup>R$</sup>ZERO<span> mensal</span></h4>
-                            <ul>
-                                <li><i class="bi bi-check-circle"></i> Perfil individual</li>
-                                <li><i class="bi bi-check-circle"></i> Quantidade ilimitada de SCs</li>
-                                <li><i class="bi bi-check-circle"></i> Registro/ compartilhamento</li>
-                                <li><i class="bi bi-check-circle"></i> Histórico de eventos</li>
-                                <li><i class="bi bi-check-circle"></i> Configurações básicas</li>
-                            </ul>
-                            <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box featured">
-                            <h3>Ativada</h3>
-                            <h6>Descontos em volumes</h6>
-                            <h4>
-                                <sup>Entre</sup>
-                                <span> em contato </span>
-                            </h4>
-                            <ul>
-                                <li><i class="bi bi-check-circle"></i> Ativa 1 Safety Cross</li>
-                                <li><i class="bi bi-check-circle"></i> Geolocalização de eventos</li>
-                                <li><i class="bi bi-check-circle"></i> Estatísticas locais</li>
-                                <li><i class="bi bi-check-circle"></i> Anexos ao evento</li>
-                                <li><i class="bi bi-check-circle"></i> ... mais</li>
-                            </ul>
-                            <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="box">
-                            <h3>Consolidada</h3>
-                            <h6>a partir de</h6>
-                            <h4>
-                                <sup>Entre</sup>
-                                <span> em contato </span>
-                            </h4>
-                            <ul>
-                                <li><i class="bi bi-check-circle"></i> Consolida até 3 Safety Crosses</li>
-                                <li><i class="bi bi-check-circle"></i> Relatórios consolidados</li>
-                                <li><i class="bi bi-check-circle"></i> Estatísticas Consolidadas</li>
-                                <li><i class="bi bi-check-circle"></i> Perfis illimitados</li>
-                                <li><i class="bi bi-check-circle"></i> ... mais</li>
-                            </ul>
-                            <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="row">
-                    <p class="section-description">(*) Integrações e customizações disponíveis sob demanda.</p>
-                </div>
-            </div>
-        </section><!-- End Pricing Section -->
-        <!-- ======= Call To Action Section ======= -->
-        <section id="call-to-action">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 text-center text-lg-start">
-                        <h3 class="cta-title"><strong>Avalie primeiro</strong></h3>
-                        <p class="cta-text">
-                            Solicite um PoC (Proof of Concept/ Prova de Conceito ) para avaliação.<br />
-                            Avalie custos, funcionalidades, e resultados, dentro de um ambiente controlado,<br />
-                            e com todo o nosso suporte.
-                        </p>
-                    </div>
-                    <div class="col-lg-4 cta-btn-container text-center">
-                        <a class="cta-btn align-middle" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
-                    </div>
-                </div>
-            </div>
-        </section><!-- End Call To Action Section -->
-        <!-- ======= Frequently Asked Questions Section ======= -->
-        <section id="faq">
-            <div class="container">
-
-                <div class="section-header">
-                    <h3 class="section-title">Perguntas frequentes</h3>
-                    <span class="section-divider"></span>
-                    <p class="section-description">
-                        A Safety Cross está em desenvolvimento no PIT
-                        <br /> Parque de Inovação Tecnológica de São José dos Campos.
-                        <br />A Safety Cross já está disponível para avaliação sob forma de PoC (provas de conceito).
-                    </p>
-                </div>
-
-                <ul class="faq-list">
-
-                    <li>
-                        <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Quando a <strong>Safety Cross</strong> estará disponível? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                A Safety Cross já está disponível para avaliação sob forma de PoC (provas de conceito).
-                                <br />Estamos interessados em testar em diferentes ambientes, em todos os setores de atividade, e  em empresas de todos os tamanhos, preferencialmente em empresas com atividade expostas a riscos níveis 3 e 4.
-                                <br />Faça contato para marcarmos uma demonstração online.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Quais são os modelos de <strong>Safety Cross</strong>? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                1. <strong>LOCAL</strong> (Gratuita): A SC <strong>LOCAL</strong> registra e compartilha eventos através do APP.<br />
-                                2. <strong>ATIVADA</strong> (Mensalidade): A SC LOCAL pode ser <strong>ATIVADA</strong>, desbloqueando funções avançadas.<br />
-                                3. <strong>CONSOLIDADA</strong> (Mensalidade): Três SCs ATIVADAS podem ser <strong>CONSOLIDADAS</strong>, com relatórios avançados consolidados.<br />
-                                4. <strong>INTEGRADA</strong> (Mensalidade): Nove SCs ATIVADAS e/ou CONSOLIDADAS podem ser <strong>INTEGRADAS</strong>, obtendo relatórios avançados integrados.<br />
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">A <strong>Safety Cross LOCAL</strong> é gratuita? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Sim, é 100% gratuita.
-                                <br />Desenvolvemos a Safety Cross para ser usada no local de trabalho, com a mesma facilidade do papel e da caneta.
-                                <br />Por isso, a <strong>Safety Cross LOCAL</strong> sempre será gratuita, pois queremos ver a ferramenta sendo usada na maior quantidade de locais de trabalho possível.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Posso integrar a <strong>Safety Cross</strong> no Power BI ou ERP? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Sim. Os modelos de Safety Cross <strong>Ativada</strong>, <strong>Consolidada</strong> e <strong>Integrada</strong> possuem entradas e saídas via API, de modo que o Power BI ou seu sistema ERP podem ser integrados diretamente, ou através de uma ferramenta customizada.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">É possível customizar a <strong>Safety Cross</strong>? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Sim. Este serviço é faturado por hora/homem de customização.
-                            </p>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">A <strong>Safety Cross</strong> já vem com IA? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Sim, ela foi concebida para integrar IA em todas as suas funcionalidades.
-                                <br />O Objetivo final é treinar modelos de aprendizado de máquina, capazes de detectar agravantes e antecipar acidentes.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">A <strong>Safety Cross</strong> faz a gestão atualizada das NRs? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq7" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Não, mas a Safety Cross está de acordo com as recomendações e preconizações das NRs, dando suporte para reuisitos das NRs, sobretudo da NR1 e GRO, Gestão de Riscos Ocupacionais.
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">A <strong>Safety Cross</strong> é uma ferramenta de Gestão de SST? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-                        <div id="faq8" class="collapse" data-bs-parent=".faq-list">
-                            <p>
-                                Não, mas a Safety Cross é uma excelente ferramenta de suporte, para tornar a rotina de prevenção de SST mais ágil e mais eficiente.
-                            </p>
-                        </div>
-                    </li>
-
-                    <!-- NRs?, Ferramenta de Gestão? -->
-
-                </ul>
-
-            </div>
-        </section><!-- End Frequently Asked Questions Section -->
-        <!-- ======= Gallery Section ======= -->
-        <section id="gallery">
-            <div class="container-fluid" data-aos="fade-up">
-                <div class="section-header">
-                    <h3 class="section-title">Aplicações</h3>
-                    <span class="section-divider"></span>
-                    <p class="section-description">
-                        Seja no Aplicativo PWA, no Portal ou funcionando num display,
-                        <br />a <strong>Safety Cross</strong> é o seu guia, rumo ao zero acidente.
-                    </p>
-                </div>
-
-                <div class="row g-0">
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-1.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-1.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-2.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-2.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-3.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-3.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-4.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-4.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-5.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-5.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6">
-                        <div class="gallery-item">
-                            <a href="assets/img/gallery/gallery-6.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                                <img src="assets/img/gallery/gallery-6.jpg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <!--<div class="col-lg-4 col-md-6">
-                    <div class="gallery-item">
-                        <a href="assets/img/gallery/gallery-7.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
-                            <img src="assets/img/gallery/gallery-7.jpg" alt="">
-                        </a>
-                    </div>
-                </div>-->
-
-                </div>
-
-            </div>
-        </section><!-- End Gallery Section -->
-        <section id="contact_form">
-            <div class="container my-4" data-aos="fade-up">
-                <div class="section-header">
-                    <h3 class="section-title">Newsletter</h3>
-                    <span class="section-divider"></span>
-                    <p class="section-description">
-                        Deixe o seu E-mail e acompanhe os passos significativos dos nossos desenvolvimentos.
-                        <br />Com a <strong>Safety Cross</strong> vamos juntos rumo ao zero acidente.
-                    </p>
-                </div>
-
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                <script>
-                    hbspt.forms.create({
-                        portalId: "48096263",
-                        formId: "3d731fe9-b2b7-4b9c-ba77-efd23bc0543e"
-                    });
-                </script>
-            </div>
-        </section>
-
-
-        <!-- ======= Contact Section ======= -->
-        <section id="contact">
-            <!--<section id="hero">-->
-            <div class="container" data-aos="fade-up">
-
-                <div class="features-row section-bg my-4" data-aos="fade-up">
-
-
-                    <div class="m-0 p-0 d-flex flex-row flex-wrap ">
-
-                        <div class="col-12 col-md-6 border rounded-3" id="maphome"></div>
-
-                        <img class="col-12 col-md-6 img-fluid advanced-feature-img-right wow fadeInRight border rounded-3" src="assets/img/PIT_2.jpg" alt="">
-
-                    </div>
-
-
-                </div>
-
-                <div class="row">
-
-                    <div class="col-lg-4 col-md-4">
-                        <div class="d-flex flex-row">
-                            <div class="p-2">
-                                <img height="42" width="42" src="assets/img/sc_logo/SC_Logo_502_48x48_Green_White_Transparent.svg" class="m-0 me-1 img-thumbnail img-fluid border border-2 border-light rounded-circle scbg-hero scui_logo" alt="Safety Cross">
-                            </div>
-
-                            <div class="d-flex flex-column">
-                                <div><a class="sc_logo text-success">Safety Cross</a></div>
-                                <div class="sc_title text-success">Rumo ao <strong>zero</strong> acidente</div>
-                            </div>
-
-                        </div>
-                        <div class="d-flex flex-column contact-about text-center align-content-between">
-
-                            <p class="text-secondary mb-2">Somos parte do ecosistema <strong>NEXUS Lab</strong>, o Hub de Inovação do Parque de Inovação Tecnológica São José dos Campos, o PIT, um dos 5 melhores ambientes de inovação no mundo. </p>
-
-                            <p class="text-center">
-                                <a href="https://pqtec.org.br/nexus/nexus-startups/">
-                                    <img src="assets/img/tp_logo/Nexus-logo-oficial-PIT.png" />
-                                </a>
-                                <img width="250" src="assets/img/tp_logo/batch21.png" />
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8 col-md-8 p-3">
-                        <!-- ======= Pricing Section ======= -->
-                        <section id="pricing" class="bg-transparent p-0 m-0">
-                            <div class="container p-0 m-0" data-aos="fade-up">
-
-                                <div class="row p-0 m-0">
-
-                                    <div class="col-12 p-0 m-0">
-                                        <div class="box mb-0 featured bg-transparent border-0 justify-content-center">
-                                            <h3 class="text-white">Entre em contato</h3>
-                                            <div class="d-flex flex-row justify-content-center align-content-center">
-
-                                                <ul class="col-12 col-lg-6 p-2 text-secondary d-none d-lg-block">
-                                                    <li><i class="bi bi-check-circle"></i> Configure online gratuitamente</li>
-                                                    <li><i class="bi bi-check-circle"></i> Ative conforme seu cronograma</li>
-                                                    <li><i class="bi bi-check-circle"></i> Escale conforme seu orçamento</li>
-                                                    <li><i class="bi bi-check-circle"></i> Use 24/7/365</li>
-                                                </ul>
-                                                <p class="col-12 col-lg-6 d-flex flex-column p-0 text-start">
-                                                    <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Stéphane</a>
-
-                                                    <a class="get-started-btn align-middle text-center m-0" href="https://wa.me/551299177-8995"><i class="bi bi-whatsapp p-3"></i>Emanuel</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                </div>
-
-                            </div>
-                        </section><!-- End Pricing Section -->
-                    </div>
-
-                </div>
-
-            </div>
-            <section id="clients">
-                <div class="container" data-aos="fade-up">
-
-                    <!-- ======= Clients Section ======= -->
-                    <section id="programs">
-                        <div class="container d-flex flex-column" data-aos="fade-up">
-
-                            <div class="d-flex flex-row text-center align-items-center justify-content-center flex-wrap">
-
-                                <div class="col-md-2 m-2">
-                                    <a href="https://pitsjc.org.br/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/PIT.png" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="col-md-2 m-2">
-                                    <a href="https://sebrae.com.br/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/Sebrae.png" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="col-md-2 m-2">
-                                    <a href="https://base27.com.br/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/b27_sm.png" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="col-md-2 m-2">
-                                    <a href="https://base27.com.br/conheca-o-area-9-e-saiba-como-participar/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/logo-base27-startups_inverted_sm.png" alt="">
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-row text-center align-items-center justify-content-center flex-wrap">
-                                <div class="col-md-2 m-2">
-                                    <a href="https://ventiur.net/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/Ventuir_inv.png" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="col-md-2 m-2">
-                                    <a href="https://conectastartupbrasil.org.br/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/Conecta.png" alt="">
-                                    </a>
-                                </div>
-
-                                <div class="col-md-2 m-2 d-none">
-                                    <a href="https://abes.com.br/" target="_blank">
-                                        <img width="150" src="assets/img/tp_logo/logo_abes.png" alt="">
-                                    </a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section><!-- End Clients Section -->
-
-
-                </div>
-            </section><!-- End Clients Section -->
-            <div class="p-2 my-2" style="font-size:smaller;">
-
-                <div class="social-links text-center">
-
-                    <a href="#" class="linkedin">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="linkedin">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                        </svg>
-                    </a>
-                    <a href="#" class="linkedin">
-                        <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                        </svg>
-                    </a>
-                </div>
-                <div class="text-center text-secondary">
-                    <div class="copyright">
-                        &copy; Copyright 2024 <strong>MapOmega</strong>
-                    </div>
-                    <div class="text-center">A Safety Cross é desenvolvida por</div>
-                    <div class="text-center"><a class="text-primary" href="https://www.mapomega.com.br" target="_blank">MapOmega Tecnologia da Informação, Ltda.</a></div>
-                    <div class="text-center"> CNPJ: 50.385.577/0001-37</div>
-                    <div class="text-center mb-2">Vitória, ES, Brasil</div>
-                    <a href="https://www.mapomega.com.br" target="_blank" class="linkedin">
-                        <img width="42" src="assets/img/sc_logo/MO_Logo_324_1024.png" />
-                    </a>
-
-                </div>
-            </div>
-            <!-- ======= Footer ======= -->
-            <footer id="footer">
+            <!-- ======= Call To Action Section ======= -->
+            <section id="call-to-action">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 text-lg-start text-center">
-                            <div class="copyright">
-                                &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
-                            </div>
-                            <div class="credits">
+                        <div class="col-lg-12 text-center text-lg-start">
+                            <h3 class="cta-title">
+                                <img height="42" width="42" src="assets/img/sc_logo/SC_Logo_502_48x48_Green_White_Transparent.svg" class="m-0 me-1 img-thumbnail img-fluid border border-2 border-light rounded-circle scbg-hero scui_logo" alt="Safety Cross">
 
-                                <!--All the links in the footer should remain intact.
+                                &nbsp;<strong>Conheça as possibilidades</strong>
+                            </h3>
+                            <p class="cta-text">Conheça as possibilidades da <strong>Safety Cross</strong> através de casos de usos, exemplos de configurações e de implementações.</p>
+                            <div class="d-grid gap-2">
+                                <a class="btn cta-btn btn-lg get-started-btn align-middle text-center m-0 mb-3" role="button"
+                                   href="#contact_form">Inscreva-se Gratuitamente</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div id="sc_tecnologia"></div>
+            <!-- ======= More Features Section ======= -->
+            <section id="more-features" class="section-bg">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-header p-0 m-0">
+                        <h3 class="section-title mb-1">Tecnologia + Padronização</h3>
+                        <h5 class="section-description pb-0">Velocidade + Eficiência</h5>
+                        <span class="section-divider"></span>
+                    </div>
+
+                    <div class="row gy-4">
+
+                        <div class="col-lg-6">
+                            <div class="box">
+                                <div class="icon">
+
+                                    <svg height="80" class="icon_sc" viewBox="0 0 24 24">
+                                        <path fill="currentColor" d="M7 7H5A2 2 0 0 0 3 9V17H5V13H7V17H9V9A2 2 0 0 0 7 7M7 11H5V9H7M14 7H10V17H12V13H14A2 2 0 0 0 16 11V9A2 2 0 0 0 14 7M14 11H12V9H14M20 9V15H21V17H17V15H18V9H17V7H21V9Z" />
+                                    </svg>
+
+
+                                </div>
+                                <h4 class="title"><a href="#sc_tecnologia">Entradas</a></h4>
+                                <p class="description">
+                                    Manuais (Relatórios de turnos) ou automatizadas (API).
+                                    <br />Não requer conexão permanente, apenas na transição do ciclo de registro (Turno/Dia)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="box">
+                                <div class="icon"><i class="bi bi-cloud-upload"></i></div>
+                                <h4 class="title"><a href="#sc_tecnologia">Processamento</a></h4>
+                                <p class="description">100% na nuvem, com recursos atualizados e Bases de Dados seguras.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="box">
+                                <div class="icon"><i class="bi bi-fingerprint"></i></div>
+                                <h4 class="title"><a href="#sc_tecnologia">Verificação e Controle</a></h4>
+                                <p class="description">
+                                    Antecipar é com a IA, mas a validação é sempre feita por humanos.
+                                    <br />Buscamos uma taxa de validação superior a 85%, permitindo reduções substanciais na contenção.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="box">
+                                <div class="icon"><i class="bi bi-laptop"></i></div>
+                                <div class="icon"><i class="bi bi-phone"></i></div>
+                                <h4 class="title"><a href="#sc_tecnologia">Alertas/ Relatórios</a></h4>
+                                <p class="description">Todos os Alertas/ Relatórios são acessíveis via Web App (PWA) ou Plataforma (Web).</p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section><!-- End More Features Section -->
+            <!-- ======= Pricing Section ======= -->
+            <section id="pricing" class="section-bg">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-header">
+                        <h3 class="section-title">Preços</h3>
+                        <span class="section-divider"></span>
+                        <h3 class="section-title">
+                            <a href="https://wa.me/5521996485172">
+                                <img width="34" src="assets/img/tp_logo/Digital_Glyph_Green.png" />
+                                <!--<i class="bi bi-whatsapp"></i>-->
+                                <span style="color: #25d366;"> CONTATO</span>
+                            </a>
+                        </h3>
+
+                        <p class="section-description">
+                            Entre em contato agora mesmo,
+                            <br />e tire as suas dúvidas.
+                        </p>
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box">
+                                <h3>Local</h3>
+                                <h6>Configuração inicial</h6>
+                                <h4><sup>R$</sup>ZERO<span> mensal</span></h4>
+                                <ul>
+                                    <li><i class="bi bi-check-circle"></i> Perfil individual</li>
+                                    <li><i class="bi bi-check-circle"></i> Quantidade ilimitada de SCs</li>
+                                    <li><i class="bi bi-check-circle"></i> Registro/ compartilhamento</li>
+                                    <li><i class="bi bi-check-circle"></i> Histórico de eventos</li>
+                                    <li><i class="bi bi-check-circle"></i> Configurações básicas</li>
+                                </ul>
+                                <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box featured">
+                                <h3>Ativada</h3>
+                                <h6>Descontos em volumes</h6>
+                                <h4>
+                                    <sup>Entre</sup>
+                                    <span> em contato </span>
+                                </h4>
+                                <ul>
+                                    <li><i class="bi bi-check-circle"></i> Ativa 1 Safety Cross</li>
+                                    <li><i class="bi bi-check-circle"></i> Geolocalização de eventos</li>
+                                    <li><i class="bi bi-check-circle"></i> Estatísticas locais</li>
+                                    <li><i class="bi bi-check-circle"></i> Anexos ao evento</li>
+                                    <li><i class="bi bi-check-circle"></i> ... mais</li>
+                                </ul>
+                                <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="box">
+                                <h3>Consolidada</h3>
+                                <h6>a partir de</h6>
+                                <h4>
+                                    <sup>Entre</sup>
+                                    <span> em contato </span>
+                                </h4>
+                                <ul>
+                                    <li><i class="bi bi-check-circle"></i> Consolida até 3 Safety Crosses</li>
+                                    <li><i class="bi bi-check-circle"></i> Relatórios consolidados</li>
+                                    <li><i class="bi bi-check-circle"></i> Estatísticas Consolidadas</li>
+                                    <li><i class="bi bi-check-circle"></i> Perfis illimitados</li>
+                                    <li><i class="bi bi-check-circle"></i> ... mais</li>
+                                </ul>
+                                <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <p class="section-description">(*) Integrações e customizações disponíveis sob demanda.</p>
+                    </div>
+                </div>
+            </section><!-- End Pricing Section -->
+            <!-- ======= Call To Action Section ======= -->
+            <section id="call-to-action">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 text-center text-lg-start">
+                            <h3 class="cta-title"><strong>Avalie primeiro</strong></h3>
+                            <p class="cta-text">
+                                Solicite um PoC (Proof of Concept/ Prova de Conceito ) para avaliação.<br />
+                                Avalie custos, funcionalidades, e resultados, dentro de um ambiente controlado,<br />
+                                e com todo o nosso suporte.
+                            </p>
+                        </div>
+                        <div class="col-lg-4 cta-btn-container text-center">
+                            <a class="cta-btn align-middle" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Entre em contato</a>
+                        </div>
+                    </div>
+                </div>
+            </section><!-- End Call To Action Section -->
+            <!-- ======= Frequently Asked Questions Section ======= -->
+            <section id="faq">
+                <div class="container">
+
+                    <div class="section-header">
+                        <h3 class="section-title">Perguntas frequentes</h3>
+                        <span class="section-divider"></span>
+                        <p class="section-description">
+                            A Safety Cross está em desenvolvimento no PIT
+                            <br /> Parque de Inovação Tecnológica de São José dos Campos.
+                            <br />A Safety Cross já está disponível para avaliação sob forma de PoC (provas de conceito).
+                        </p>
+                    </div>
+
+                    <ul class="faq-list">
+
+                        <li>
+                            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Quando a <strong>Safety Cross</strong> estará disponível? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    A Safety Cross já está disponível para avaliação sob forma de PoC (provas de conceito).
+                                    <br />Estamos interessados em testar em diferentes ambientes, em todos os setores de atividade, e  em empresas de todos os tamanhos, preferencialmente em empresas com atividade expostas a riscos níveis 3 e 4.
+                                    <br />Faça contato para marcarmos uma demonstração online.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Quais são os modelos de <strong>Safety Cross</strong>? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    1. <strong>LOCAL</strong> (Gratuita): A SC <strong>LOCAL</strong> registra e compartilha eventos através do APP.<br />
+                                    2. <strong>ATIVADA</strong> (Mensalidade): A SC LOCAL pode ser <strong>ATIVADA</strong>, desbloqueando funções avançadas.<br />
+                                    3. <strong>CONSOLIDADA</strong> (Mensalidade): Três SCs ATIVADAS podem ser <strong>CONSOLIDADAS</strong>, com relatórios avançados consolidados.<br />
+                                    4. <strong>INTEGRADA</strong> (Mensalidade): Nove SCs ATIVADAS e/ou CONSOLIDADAS podem ser <strong>INTEGRADAS</strong>, obtendo relatórios avançados integrados.<br />
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">A <strong>Safety Cross LOCAL</strong> é gratuita? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Sim, é 100% gratuita.
+                                    <br />Desenvolvemos a Safety Cross para ser usada no local de trabalho, com a mesma facilidade do papel e da caneta.
+                                    <br />Por isso, a <strong>Safety Cross LOCAL</strong> sempre será gratuita, pois queremos ver a ferramenta sendo usada na maior quantidade de locais de trabalho possível.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Posso integrar a <strong>Safety Cross</strong> no Power BI ou ERP? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Sim. Os modelos de Safety Cross <strong>Ativada</strong>, <strong>Consolidada</strong> e <strong>Integrada</strong> possuem entradas e saídas via API, de modo que o Power BI ou seu sistema ERP podem ser integrados diretamente, ou através de uma ferramenta customizada.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">É possível customizar a <strong>Safety Cross</strong>? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Sim. Este serviço é faturado por hora/homem de customização.
+                                </p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">A <strong>Safety Cross</strong> já vem com IA? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Sim, ela foi concebida para integrar IA em todas as suas funcionalidades.
+                                    <br />O Objetivo final é treinar modelos de aprendizado de máquina, capazes de detectar agravantes e antecipar acidentes.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq7" class="collapsed question">A <strong>Safety Cross</strong> faz a gestão atualizada das NRs? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq7" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Não, mas a Safety Cross está de acordo com as recomendações e preconizações das NRs, dando suporte para reuisitos das NRs, sobretudo da NR1 e GRO, Gestão de Riscos Ocupacionais.
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div data-bs-toggle="collapse" href="#faq8" class="collapsed question">A <strong>Safety Cross</strong> é uma ferramenta de Gestão de SST? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+                            <div id="faq8" class="collapse" data-bs-parent=".faq-list">
+                                <p>
+                                    Não, mas a Safety Cross é uma excelente ferramenta de suporte, para tornar a rotina de prevenção de SST mais ágil e mais eficiente.
+                                </p>
+                            </div>
+                        </li>
+
+                        <!-- NRs?, Ferramenta de Gestão? -->
+
+                    </ul>
+
+                </div>
+            </section><!-- End Frequently Asked Questions Section -->
+            <!-- ======= Gallery Section ======= -->
+            <section id="gallery">
+                <div class="container-fluid" data-aos="fade-up">
+                    <div class="section-header">
+                        <h3 class="section-title">Aplicações</h3>
+                        <span class="section-divider"></span>
+                        <p class="section-description">
+                            Seja no Aplicativo PWA, no Portal ou funcionando num display,
+                            <br />a <strong>Safety Cross</strong> é o seu guia, rumo ao zero acidente.
+                        </p>
+                    </div>
+
+                    <div class="row g-0">
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-1.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-1.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-2.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-2.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-3.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-3.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-4.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-4.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-5.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-5.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="gallery-item">
+                                <a href="assets/img/gallery/gallery-6.jpg" data-gall="portfolioGallery" class="gallery-lightbox">
+                                    <img src="assets/img/gallery/gallery-6.jpg" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section><!-- End Gallery Section -->
+            <section id="contact_form">
+                <div class="container my-4" data-aos="fade-up">
+                    <div class="section-header">
+                        <h3 class="section-title">Newsletter</h3>
+                        <span class="section-divider"></span>
+                        <p class="section-description">
+                            Deixe o seu E-mail e acompanhe os passos significativos dos nossos desenvolvimentos.
+                            <br />Com a <strong>Safety Cross</strong> vamos juntos rumo ao zero acidente.
+                        </p>
+                    </div>
+
+                    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+                hbspt.forms.create({
+                    portalId: "48096263",
+                    formId: "3d731fe9-b2b7-4b9c-ba77-efd23bc0543e"
+                });
+            </script>
+                </div>
+            </section>
+
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact">
+                <!--<section id="hero">-->
+                <div class="container" data-aos="fade-up">
+
+                    <div class="features-row section-bg my-4" data-aos="fade-up">
+
+
+                        <div class="m-0 p-0 d-flex flex-row flex-wrap ">
+
+                            <div class="col-12 col-md-6 border rounded-3" id="map"></div>
+
+                            <img class="col-12 col-md-6 img-fluid advanced-feature-img-right wow fadeInRight border rounded-3" src="assets/img/PIT_2.jpg" alt="">
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-lg-4 col-md-4">
+                            <div class="d-flex flex-row">
+                                <div class="p-2">
+                                    <img height="42" width="42" src="assets/img/sc_logo/SC_Logo_502_48x48_Green_White_Transparent.svg" class="m-0 me-1 img-thumbnail img-fluid border border-2 border-light rounded-circle scbg-hero scui_logo" alt="Safety Cross">
+                                </div>
+
+                                <div class="d-flex flex-column">
+                                    <div><a class="sc_logo text-success">Safety Cross</a></div>
+                                    <div class="sc_title text-success">Rumo ao <strong>zero</strong> acidente</div>
+                                </div>
+
+                            </div>
+                            <div class="d-flex flex-column contact-about text-center align-content-between">
+
+                                <p class="text-secondary mb-2">Somos parte do ecosistema <strong>NEXUS Lab</strong>, o Hub de Inovação do Parque de Inovação Tecnológica São José dos Campos, o PIT, um dos 5 melhores ambientes de inovação no mundo. </p>
+
+                                <p class="text-center">
+                                    <a href="https://pqtec.org.br/nexus/nexus-startups/">
+                                        <img src="assets/img/tp_logo/Nexus-logo-oficial-PIT.png" />
+                                    </a>
+                                    <img width="250" src="assets/img/tp_logo/batch21.png" />
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-8 col-md-8 p-3">
+                            <!-- ======= Pricing Section ======= -->
+                            <section id="pricing" class="bg-transparent p-0 m-0">
+                                <div class="container p-0 m-0" data-aos="fade-up">
+
+                                    <div class="row p-0 m-0">
+
+                                        <div class="col-12 p-0 m-0">
+                                            <div class="box mb-0 featured bg-transparent border-0 justify-content-center">
+                                                <h3 class="text-white">Entre em contato</h3>
+                                                <div class="d-flex flex-row justify-content-center align-content-center">
+
+                                                    <ul class="col-12 col-lg-6 p-2 text-secondary d-none d-lg-block">
+                                                        <li><i class="bi bi-check-circle"></i> Configure online gratuitamente</li>
+                                                        <li><i class="bi bi-check-circle"></i> Ative conforme seu cronograma</li>
+                                                        <li><i class="bi bi-check-circle"></i> Escale conforme seu orçamento</li>
+                                                        <li><i class="bi bi-check-circle"></i> Use 24/7/365</li>
+                                                    </ul>
+                                                    <p class="col-12 col-lg-6 d-flex flex-column p-0 text-start">
+                                                        <a class="get-started-btn align-middle text-center m-0 mb-3" href="https://wa.me/5521996485172"><i class="bi bi-whatsapp p-3"></i>Stéphane</a>
+
+                                                        <a class="get-started-btn align-middle text-center m-0" href="https://wa.me/551299177-8995"><i class="bi bi-whatsapp p-3"></i>Emanuel</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </section><!-- End Pricing Section -->
+                        </div>
+
+                    </div>
+
+                </div>
+                <section id="clients">
+                    <div class="container" data-aos="fade-up">
+
+                        <!-- ======= Clients Section ======= -->
+                        <section id="programs">
+                            <div class="container d-flex flex-column" data-aos="fade-up">
+
+                                <div class="d-flex flex-row text-center align-items-center justify-content-center flex-wrap">
+
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://pitsjc.org.br/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/PIT.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://sebrae.com.br/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/Sebrae.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://base27.com.br/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/b27_sm.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://base27.com.br/conheca-o-area-9-e-saiba-como-participar/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/logo-base27-startups_inverted_sm.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row text-center align-items-center justify-content-center flex-wrap">
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://ventiur.net/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/Ventuir_inv.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-2 m-2">
+                                        <a href="https://conectastartupbrasil.org.br/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/Conecta.png" alt="">
+                                        </a>
+                                    </div>
+
+                                    <div class="col-md-2 m-2 d-none">
+                                        <a href="https://abes.com.br/" target="_blank">
+                                            <img width="150" src="assets/img/tp_logo/logo_abes.png" alt="">
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section><!-- End Clients Section -->
+
+
+                    </div>
+                </section><!-- End Clients Section -->
+                <div class="p-2 my-2" style="font-size:smaller;">
+
+                    <div class="social-links text-center">
+
+                        <a href="#" class="linkedin">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865l8.875 11.633Z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="linkedin">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="linkedin">
+                            <svg width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="text-center text-secondary">
+                        <div class="copyright">
+                            &copy; Copyright 2024 <strong>MapOmega</strong>
+                        </div>
+                        <div class="text-center">A Safety Cross é desenvolvida por</div>
+                        <div class="text-center"><a class="text-primary" href="https://www.mapomega.com.br" target="_blank">MapOmega Tecnologia da Informação, Ltda.</a></div>
+                        <div class="text-center"> CNPJ: 50.385.577/0001-37</div>
+                        <div class="text-center mb-2">Vitória, ES, Brasil</div>
+                        <a href="https://www.mapomega.com.br" target="_blank" class="linkedin">
+                            <img width="42" src="assets/img/sc_logo/MO_Logo_324_1024.png" />
+                        </a>
+
+                    </div>
+                </div>
+                <!-- ======= Footer ======= -->
+                <footer id="footer">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 text-lg-start text-center">
+                                <div class="copyright">
+                                    &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
+                                </div>
+                                <div class="credits">
+
+                                    <!--All the links in the footer should remain intact.
                             You can delete the links only if you purchased the pro version.
                             Licensing information: https://bootstrapmade.com/license/
                             Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon-->
-                                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> |
-                                <a href="https://www.freepik.com/free-vector/grunge-construction-background_881541.htm#query=caution%20stripes&position=12&from_view=keyword&track=ais">Image by kjpargeter</a> on Freepik
+                                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> |
+                                    <a href="https://www.freepik.com/free-vector/grunge-construction-background_881541.htm#query=caution%20stripes&position=12&from_view=keyword&track=ais">Image by kjpargeter</a> on Freepik
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0 text-light">
+                                    <a href="#hero" class="scrollto">Início</a>
+                                    <a href="#contact" class="scrollto">Contato</a>
+                                    <a href="#">Política de privacidade</a>
+                                    <a href="#">Termos de uso</a>
+                                </nav>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0 text-light">
-                                <a href="#hero" class="scrollto">Início</a>
-                                <a href="#contact" class="scrollto">Contato</a>
-                                <a href="#">Política de privacidade</a>
-                                <a href="#">Termos de uso</a>
-                            </nav>
-                        </div>
+
                     </div>
 
-                </div>
 
+                </footer><!-- End  Footer -->
 
-            </footer><!-- End  Footer -->
+            </section><!-- End Contact Section -->
 
-        </section><!-- End Contact Section -->
-
-    </main><!-- End #main -->
+</main><!-- End #main -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-chevron-up"></i></a>
-    <!-- Google Maps -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC8F1bVIGsP_nHBaOBgBpDCsRd-LYeFUsA&callback=initMap&v=weekly&libraries=visualization"
-            defer></script>
-
     <!-- Vendor JS Files -->
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -1318,28 +1382,39 @@
         });
 
 
-        function initMap() {
+        let map;
 
+        async function initMap() {
             const _center = { lat: -23.156869, lng: -45.791661 };//-23.156869, -45.791661,18 // PqTec, SJC, SP
 
-            map = new google.maps.Map(document.getElementById("maphome"), {
-                zoom: 17,
+            const { Map } = await google.maps.importLibrary("maps");
+            const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+            map = new Map(document.getElementById("map"), {
+                zoom: 16,
                 center: _center,
                 mapTypeId: "satellite",
+                mapId: "29811bd89e4be758",
             });
 
-            var mkrPosition = _center;
-            var ic_image = "data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQoNCjxzdmcgd2lkdGg9JzQ4JyBoZWlnaHQ9JzQ4JyB2aWV3Qm94PScwIDAgNDggNDgnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+DQogIDxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDAgMCkgcm90YXRlKDAsMjQsMjQpJz4NCiAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KICAgICAgLmNpcmNsZXNsY3RkIHsNCiAgICAgIGZpbGw6IHRyYW5zcGFyZW50Ow0KICAgICAgc3Ryb2tlOiBibHVlOw0KICAgICAgc3Ryb2tlLXdpZHRoOiA1Ow0KICAgICAgfQ0KDQogICAgICAucHVsc2VzZWxjdGQgew0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOw0KICAgICAgdHJhbnNmb3JtLW9yaWdpbjogNTAlIDUwJTsNCiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWR1cmF0aW9uOiAyczsNCiAgICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogMnM7DQogICAgICAtd2Via2l0LWFuaW1hdGlvbi1uYW1lOiBwdWxzZXNlbGN0ZDsNCiAgICAgIGFuaW1hdGlvbi1uYW1lOiBwdWxzZXNlbGN0ZDsNCiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7DQogICAgICBhbmltYXRpb24taXRlcmF0aW9uLWNvdW50OiBpbmZpbml0ZTsNCiAgICAgIH0NCg0KICAgICAgQC13ZWJraXQta2V5ZnJhbWVzIHB1bHNlc2VsY3RkIHsNCiAgICAgIGZyb20gew0KICAgICAgc3Ryb2tlLXdpZHRoOiAxMHB4Ow0KICAgICAgc3Ryb2tlLW9wYWNpdHk6IDE7DQogICAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMC4zKTsNCiAgICAgIHRyYW5zZm9ybTogc2NhbGUoMC4zKTsNCiAgICAgIH0NCg0KICAgICAgdG8gew0KICAgICAgc3Ryb2tlLXdpZHRoOiAwOw0KICAgICAgc3Ryb2tlLW9wYWNpdHk6IDA7DQogICAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMi4zKTsNCiAgICAgIHRyYW5zZm9ybTogc2NhbGUoMi4zKTsNCiAgICAgIH0NCiAgICAgIH0NCg0KICAgICAgQGtleWZyYW1lcyBwdWxzZXNlbGN0ZCB7DQogICAgICBmcm9tIHsNCiAgICAgIHN0cm9rZS13aWR0aDogMTVweDsNCiAgICAgIHN0cm9rZS1vcGFjaXR5OiAxOw0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDAuMyk7DQogICAgICB0cmFuc2Zvcm06IHNjYWxlKDAuMyk7DQogICAgICB9DQoNCiAgICAgIHRvIHsNCiAgICAgIHN0cm9rZS13aWR0aDogMDsNCiAgICAgIHN0cm9rZS1vcGFjaXR5OiAwOw0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDIuMyk7DQogICAgICB0cmFuc2Zvcm06IHNjYWxlKDIuMyk7DQogICAgICB9DQogICAgICB9DQogICAgPC9zdHlsZT4NCiAgICA8Y2lyY2xlIGNsYXNzPSdwdWxzZXNlbGN0ZCBjaXJjbGVzbGN0ZCcgY3g9JzUwJScgY3k9JzUwJScgcj0nMTBweCc+DQogICAgPC9jaXJjbGU+DQogIDwvZz4NCiAgPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTIgMTIpIHJvdGF0ZSgwLDEyLDEyKSc+DQogICAgPGc+DQogICAgICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQsMTJjMCw2LjYzMS01LjM3MSwxMi0xMiwxMlMwLDE4LjYzMSwwLDEyUzUuMzcxLDAsMTIsMFMyNCw1LjM2OSwyNCwxMnoiLz4NCiAgICAgIDxwYXRoIGZpbGw9IiMzNTNCNDEiIGQ9Ik0yMi42MywxMmMwLDUuODc0LTQuNzU1LDEwLjYzLTEwLjYyOSwxMC42M1MxLjM3LDE3Ljg3NCwxLjM3LDEyQzEuMzcsNi4xMjYsNi4xMjYsMS4zNywxMiwxLjM3DQoJCVMyMi42Myw2LjEyNiwyMi42MywxMnoiLz4NCiAgICAgIDxnPg0KICAgICAgICA8cG9seWdvbiBmaWxsPSIjRjJGMkYyIiBwb2ludHM9IjE0LjY2Miw5LjMzOSAxNC42NjIsNC44OTYgOS4zMzksNC44OTYgOS4zMzksOS4zMzkgNC44OTcsOS4zMzkgNC44OTcsMTQuNjYgOS4zMzksMTQuNjYgDQoJCQk5LjMzOSwxOS4xMDMgMTQuNjYyLDE5LjEwMyAxNC42NjIsMTQuNjYgMTkuMTA0LDE0LjY2IDE5LjEwNCw5LjMzOSAJCSIvPg0KICAgICAgICA8cG9seWdvbiBmaWxsPSIjMEY4QTU3IiBwb2ludHM9IjEyLjg5MSwxMS4xMDkgMTQuNjYyLDkuMzM5IDE0LjY2Miw0Ljg5NiA5LjMzOSw0Ljg5NiA5LjMzOSw5LjMzOSA0Ljg5Nyw5LjMzOSA0Ljg5NywxNC42NiANCgkJCTkuMzM5LDE0LjY2IDExLjExLDEyLjg5MSAJCSIvPg0KICAgICAgPC9nPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQoNCg==";
-            var mElement = new google.maps.Marker({
-                position: mkrPosition,
-                map: map,
-                icon: ic_image,
+            const marker = new AdvancedMarkerElement({
+                map,
+                content: buildContent(),
+                position: _center,
                 title: "Safety Cross @ NEXUS Lab - PIT Parque de Inovação Tecnológica São José dos Campos",
-                draggable: false
-                //zIndex: null
+
             });
 
+            function buildContent() {
+                const content = document.createElement("div");
+                const ic_PIT = "data:image/svg+xml;base64,77u/PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQoNCjxzdmcgd2lkdGg9JzQ4JyBoZWlnaHQ9JzQ4JyB2aWV3Qm94PScwIDAgNDggNDgnIHhtbG5zPSdodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Zyc+DQogIDxnIHRyYW5zZm9ybT0ndHJhbnNsYXRlKDAgMCkgcm90YXRlKDAsMjQsMjQpJz4NCiAgICA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KICAgICAgLmNpcmNsZXNsY3RkIHsNCiAgICAgIGZpbGw6IHRyYW5zcGFyZW50Ow0KICAgICAgc3Ryb2tlOiBibHVlOw0KICAgICAgc3Ryb2tlLXdpZHRoOiA1Ow0KICAgICAgfQ0KDQogICAgICAucHVsc2VzZWxjdGQgew0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm0tb3JpZ2luOiA1MCUgNTAlOw0KICAgICAgdHJhbnNmb3JtLW9yaWdpbjogNTAlIDUwJTsNCiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWR1cmF0aW9uOiAyczsNCiAgICAgIGFuaW1hdGlvbi1kdXJhdGlvbjogMnM7DQogICAgICAtd2Via2l0LWFuaW1hdGlvbi1uYW1lOiBwdWxzZXNlbGN0ZDsNCiAgICAgIGFuaW1hdGlvbi1uYW1lOiBwdWxzZXNlbGN0ZDsNCiAgICAgIC13ZWJraXQtYW5pbWF0aW9uLWl0ZXJhdGlvbi1jb3VudDogaW5maW5pdGU7DQogICAgICBhbmltYXRpb24taXRlcmF0aW9uLWNvdW50OiBpbmZpbml0ZTsNCiAgICAgIH0NCg0KICAgICAgQC13ZWJraXQta2V5ZnJhbWVzIHB1bHNlc2VsY3RkIHsNCiAgICAgIGZyb20gew0KICAgICAgc3Ryb2tlLXdpZHRoOiAxMHB4Ow0KICAgICAgc3Ryb2tlLW9wYWNpdHk6IDE7DQogICAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMC4zKTsNCiAgICAgIHRyYW5zZm9ybTogc2NhbGUoMC4zKTsNCiAgICAgIH0NCg0KICAgICAgdG8gew0KICAgICAgc3Ryb2tlLXdpZHRoOiAwOw0KICAgICAgc3Ryb2tlLW9wYWNpdHk6IDA7DQogICAgICAtd2Via2l0LXRyYW5zZm9ybTogc2NhbGUoMi4zKTsNCiAgICAgIHRyYW5zZm9ybTogc2NhbGUoMi4zKTsNCiAgICAgIH0NCiAgICAgIH0NCg0KICAgICAgQGtleWZyYW1lcyBwdWxzZXNlbGN0ZCB7DQogICAgICBmcm9tIHsNCiAgICAgIHN0cm9rZS13aWR0aDogMTVweDsNCiAgICAgIHN0cm9rZS1vcGFjaXR5OiAxOw0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDAuMyk7DQogICAgICB0cmFuc2Zvcm06IHNjYWxlKDAuMyk7DQogICAgICB9DQoNCiAgICAgIHRvIHsNCiAgICAgIHN0cm9rZS13aWR0aDogMDsNCiAgICAgIHN0cm9rZS1vcGFjaXR5OiAwOw0KICAgICAgLXdlYmtpdC10cmFuc2Zvcm06IHNjYWxlKDIuMyk7DQogICAgICB0cmFuc2Zvcm06IHNjYWxlKDIuMyk7DQogICAgICB9DQogICAgICB9DQogICAgPC9zdHlsZT4NCiAgICA8Y2lyY2xlIGNsYXNzPSdwdWxzZXNlbGN0ZCBjaXJjbGVzbGN0ZCcgY3g9JzUwJScgY3k9JzUwJScgcj0nMTBweCc+DQogICAgPC9jaXJjbGU+DQogIDwvZz4NCiAgPGcgdHJhbnNmb3JtPSd0cmFuc2xhdGUoMTIgMTIpIHJvdGF0ZSgwLDEyLDEyKSc+DQogICAgPGc+DQogICAgICA8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjQsMTJjMCw2LjYzMS01LjM3MSwxMi0xMiwxMlMwLDE4LjYzMSwwLDEyUzUuMzcxLDAsMTIsMFMyNCw1LjM2OSwyNCwxMnoiLz4NCiAgICAgIDxwYXRoIGZpbGw9IiMzNTNCNDEiIGQ9Ik0yMi42MywxMmMwLDUuODc0LTQuNzU1LDEwLjYzLTEwLjYyOSwxMC42M1MxLjM3LDE3Ljg3NCwxLjM3LDEyQzEuMzcsNi4xMjYsNi4xMjYsMS4zNywxMiwxLjM3DQoJCVMyMi42Myw2LjEyNiwyMi42MywxMnoiLz4NCiAgICAgIDxnPg0KICAgICAgICA8cG9seWdvbiBmaWxsPSIjRjJGMkYyIiBwb2ludHM9IjE0LjY2Miw5LjMzOSAxNC42NjIsNC44OTYgOS4zMzksNC44OTYgOS4zMzksOS4zMzkgNC44OTcsOS4zMzkgNC44OTcsMTQuNjYgOS4zMzksMTQuNjYgDQoJCQk5LjMzOSwxOS4xMDMgMTQuNjYyLDE5LjEwMyAxNC42NjIsMTQuNjYgMTkuMTA0LDE0LjY2IDE5LjEwNCw5LjMzOSAJCSIvPg0KICAgICAgICA8cG9seWdvbiBmaWxsPSIjMEY4QTU3IiBwb2ludHM9IjEyLjg5MSwxMS4xMDkgMTQuNjYyLDkuMzM5IDE0LjY2Miw0Ljg5NiA5LjMzOSw0Ljg5NiA5LjMzOSw5LjMzOSA0Ljg5Nyw5LjMzOSA0Ljg5NywxNC42NiANCgkJCTkuMzM5LDE0LjY2IDExLjExLDEyLjg5MSAJCSIvPg0KICAgICAgPC9nPg0KICAgIDwvZz4NCiAgPC9nPg0KPC9zdmc+DQoNCg==";
+
+                content.innerHTML = `<div class="icon"><img src="${ic_PIT}"></div>`;
+                return content;
+            }
         }
+
+        initMap();
 
     </script>
 
