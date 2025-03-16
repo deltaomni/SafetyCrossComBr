@@ -1,36 +1,69 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
-    <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://rawgit.com/AR-js-org/AR.js/1.7.2/aframe/build/aframe-ar-nft.min.js"></script>
-    <!--
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAR Location Picker</title>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #map {
+            width: 100%;
+            height: 60vh;
+        }
+
+        #info {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #qrcode {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="map"></div>
+    <div id="info">
+        <p>Click on the map to set a location for WebAR.</p>
+        <p>Selected Location: <span id="coordinates">None</span></p>
+        <canvas id="qrcode"></canvas>
+    </div>
 
     <script>
-        //https://yourwebarapp.com?lat=-22.191234&lng=-43.443013
-            const urlParams = new URLSearchParams(window.location.search);
-    const lat = urlParams.get("lat") || defaultLat;
-    const lng = urlParams.get("lng") || defaultLng;
-        </script>
+        mapboxgl.accessToken = "pk.eyJ1Ijoia2luZ29mZGVuZHJvYXIiLCJhIjoiY204Y2NnZWJmMWJnaTJrb2V6NXFjbzZxbiJ9.WqCWo3aF4q0k0EfxsxPOmg";
 
-            -->
+        const map = new mapboxgl.Map({
+            container: "map",
+            style: "mapbox://styles/mapbox/streets-v11",
+            center: [-74.006, 40.7128], // Default to NYC
+            zoom: 13
+        });
 
-</head>
-<body style="margin: 0; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false"
-             embedded
-             arjs="sourceType: webcam; debugUIEnabled: false; locationEnabled: true">
-        <!-- 3D Object placed at GPS coordinates -->
-        <!-- -22.191234,-43.443013 -->
-        <!--  -->
-        <a-entity gps-entity-place="latitude: -22.191234; longitude: -43.443013"
-                  gltf-model="url(export.glb)" scale="1 1 1"
-                  material="color: red"></a-entity>
-        <!--<a-entity gps-entity-place="latitude: -22.191234; longitude: -43.443013"
-              geometry="primitive: box; height: 1; width: 1; depth: 1"
-              material="color: red"></a-entity>-->
-        <!-- Camera -->
-        <a-camera gps-camera rotation-reader></a-camera>
-    </a-scene>
+        let marker;
+        map.on("click", (e) => {
+            const { lng, lat } = e.lngLat;
+            document.getElementById("coordinates").textContent = `${lat.toFixed(6)}, ${lng.toFixed(6)}`;
+
+            if (marker) marker.remove();
+            marker = new mapboxgl.Marker().setLngLat([lng, lat]).addTo(map);
+
+            const qrUrl = `https://www.safetycross.com.br/Projects/TC/ar.html?lat=${lat}&lng=${lng}`;
+            generateQRCode(qrUrl);
+        });
+
+        function generateQRCode(url) {
+            const qr = new QRious({ element: document.getElementById("qrcode"), value: url, size: 200 });
+        }
+    </script>
+
 </body>
 </html>
