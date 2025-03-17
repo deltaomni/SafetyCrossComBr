@@ -3,17 +3,32 @@
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://rawgit.com/jeromeetienne/AR.js/1.7.2/aframe/build/aframe-ar.min.js"></script>
-    <script src="https://rawgit.com/AR-js-org/AR.js/1.7.2/aframe/build/aframe-ar-nft.min.js"></script>
+    <!--<script src="https://rawgit.com/AR-js-org/AR.js/1.7.2/aframe/build/aframe-ar-nft.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+
 </head>
 <body style="margin: 0; overflow: hidden;">
-    <a-scene vr-mode-ui="enabled: false"
-             embedded
-             arjs="sourceType: webcam; debugUIEnabled: false; locationEnabled: true">
+    <!--<a-scene vr-mode-ui="enabled: false"
+             embedded arjs="sourceType: webcam; debugUIEnabled: false; locationEnabled: true">-->
+    <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
+
         <a-entity id="object" geometry="primitive: box; height: 1; width: 1; depth: 1" material="color: red"></a-entity>
-        <a-camera gps-camera rotation-reader></a-camera>
+        <!--<a-camera gps-camera rotation-reader></a-camera>-->
+        <a-camera gps-camera rotation-reader="enabled: true"></a-camera>
+
     </a-scene>
 
     <script>
+        navigator.geolocation.getCurrentPosition(
+            (pos) => {
+                console.log("User GPS:", pos.coords.latitude, pos.coords.longitude);
+            },
+            (err) => {
+                console.error("GPS Error:", err.message);
+            },
+            { enableHighAccuracy: true }
+        );
+
         function getQueryParams() {
             const urlParams = new URLSearchParams(window.location.search);
             return {
