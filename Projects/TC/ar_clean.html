@@ -3,6 +3,19 @@
 <head>
     <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
+    <script>
+        navigator.geolocation.getCurrentPosition((pos) => {
+            let lat = pos.coords.latitude + 0.0001; // Move 11m north
+            let lon = pos.coords.longitude + 0.0001; // Move 11m east
+
+            let entity = document.createElement("a-entity");
+            entity.setAttribute("gps-entity-place", `latitude: ${lat}; longitude: ${lon}`);
+            entity.setAttribute("geometry", "primitive: box; height: 1; width: 1; depth: 1");
+            entity.setAttribute("material", "color: purple");
+            document.querySelector("a-scene").appendChild(entity);
+        });
+
+    </script>
 </head>
 <body>
     <!-- -43.443013, -22.191234  -->
